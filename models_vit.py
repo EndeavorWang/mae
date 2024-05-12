@@ -8,6 +8,7 @@
 # timm: https://github.com/rwightman/pytorch-image-models/tree/master/timm
 # DeiT: https://github.com/facebookresearch/deit
 # --------------------------------------------------------
+# finetune stage mae encoder
 
 from functools import partial
 
