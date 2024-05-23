@@ -49,7 +49,7 @@ class MaskedAutoencoderViT(nn.Module):
         # 把encoder的输出映射到decoder输入
         self.decoder_embed = nn.Linear(embed_dim, decoder_embed_dim, bias=True)
 
-        # 可训练，替换掉被mask的patch
+        # 可训练参数，替换掉被mask的patch
         self.mask_token = nn.Parameter(torch.zeros(1, 1, decoder_embed_dim))
 
         self.decoder_pos_embed = nn.Parameter(torch.zeros(1, num_patches + 1, decoder_embed_dim), requires_grad=False)  # fixed sin-cos embedding
